@@ -1,6 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
+import Divisions from "./views/Divisions.vue";
+import Schedules from "./views/Schedules.vue";
 
 Vue.use(Router);
 
@@ -23,8 +25,14 @@ export default new Router({
         import(/* webpackChunkName: "about" */ "./views/About.vue")
     },
     {
-      path: "/admin",
-      name: "admin"
+      path: "/divisions",
+      name: "divisons",
+      component: Divisions
+    },
+    {
+      path: "/schedules",
+      name: "schedules",
+      component: Schedules
     }
   ]
 });
